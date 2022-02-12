@@ -1403,7 +1403,7 @@ progress {
 
   .col-lg-8 {
     flex: 0 0 auto;
-    width: 66.66666667%;
+    width: 80.66666667%;
   }
 
   .col-lg-9 {
@@ -5777,7 +5777,7 @@ textarea.form-control-lg {
 @media (min-width: 992px) {
   .modal-lg,
 .modal-xl {
-    max-width: 810px;
+    max-width: 800px;
   }
 }
 @media (min-width: 1200px) {
@@ -7958,8 +7958,9 @@ textarea.form-control-lg {
 }
 
 .text-white-50 {
+  text-align: justify;
   --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #e0d5d6 !important;
 }
 
 .text-reset {
