@@ -1,96 +1,65 @@
-var $slider = $('.slider');
-
-var $slickTrack = $('.slick-track');
-var $slickCurrent = $('.slick-current');
-
-var slideDuration = 900;
-
-//RESET ANIMATIONS
-// On init slide change
-$slider.on('init', function(slick){
-  TweenMax.to($('.slick-track'), 0.9, {
-    marginLeft: 0
-  });
-  TweenMax.to($('.slick-active'), 0.9, {
-    x: 0,
-    zIndex: 2
-  });
+const images = document.querySelectorAll(".gallery__item img");
+let imgIndex
+let imgSrc;
+// get images src onclick
+images.forEach((img, i) => {
+    img.addEventListener("click", (e) => {
+        imgSrc = e.target.src;
+        //run modal function
+        imgModal(imgSrc);
+        //index of the next image
+        imgIndex = i;
+    });
 });
-// On before slide change
-$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  TweenMax.to($('.slick-track'), 0.9, {
-    marginLeft: 0
-  });
-  TweenMax.to($('.slick-active'), 0.9, {
-    x: 0
-  });
-});
-
-// On after slide change
-$slider.on('afterChange', function(event, slick, currentSlide){
-  TweenMax.to($('.slick-track'), 0.9, {
-    marginLeft: 0
-  });
-  $('.slick-slide').css('z-index','1');
-  TweenMax.to($('.slick-active'), 0.9, {
-    x: 0,
-    zIndex: 2
-  });
-});
-
-//SLICK INIT
-$slider.slick({
-  speed: slideDuration,
-  dots: true,
-  waitForAnimate: true,
-  useTransform: true,
-  cssEase: 'cubic-bezier(0.455, 0.030, 0.130, 1.000)'
-})
-
-//PREV
-$('.slick-prev').on('mouseenter', function(){
-                TweenMax.to($('.slick-track'), 0.6, {
-                  marginLeft: "180px",
-                  ease: Quad.easeOut
-                });
-                TweenMax.to($('.slick-current'), 0.6, {
-                  x: -100,
-                  ease: Quad.easeOut
-                });
-            });
-
-$('.slick-prev').on('mouseleave', function(){
-                TweenMax.to($('.slick-track'), 0.4, {
-                  marginLeft: 0,
-                  ease: Sine.easeInOut
-                });
-                TweenMax.to($('.slick-current'), 0.4, {
-                  x: 0,
-                  ease: Sine.easeInOut
-                });
-            });
-
-//NEXT
-$('.slick-next').on('mouseenter', function(){
-  
-                TweenMax.to($('.slick-track'), 0.6, {
-                  marginLeft: "-180px",
-                  ease: Quad.easeOut
-                });
-                TweenMax.to($('.slick-current'), 0.6, {
-                  x: 100,
-                  ease: Quad.easeOut
-                });
-            });
-
-$('.slick-next').on('mouseleave', function(){
-                TweenMax.to($('.slick-track'), 0.4, {
-                  marginLeft: 0,
-                  ease: Quad.easeInOut
-                });
-                TweenMax.to($('.slick-current'), 0.4, {
-                  x: 0,
-                  ease: Quad.easeInOut
-                });
-            });
-
+//creating the modal
+let imgModal = (src) => {
+    const modal = document.createElement("div");
+    modal.setAttribute("class", "modal");
+    //add modal to the parent element 
+    document.querySelector(".main").append(modal);
+    //adding image to modal
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", src);
+    //creating the close button
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    //close function
+    closeBtn.onclick = () => {
+        modal.remove();
+    };
+//next and previous buttons
+const nextBtn = document.createElement("i");
+nextBtn.setAttribute("class", "fas fa-angle-right nextBtn");
+// change the src of current image to the src of next image
+nextBtn.onclick = () => {
+    newImage.setAttribute("src", nextImg())
+};
+const prevBtn = document.createElement("i");
+prevBtn.setAttribute("class", "fas fa-angle-left prevBtn");
+// change the src of current image to the src of pevious image
+prevBtn.onclick = () => {
+    newImage.setAttribute("src", prevImg())
+}
+modal.append(newImage, closeBtn, nextBtn, prevBtn);
+};
+//next image function
+let nextImg = () => {
+    imgIndex++;
+    //check if it is the the last image
+    if (imgIndex >= images.length) {
+        imgIndex = 0
+    }
+    //return src of the new image
+    return images[imgIndex].src;
+};
+//previous image function
+let prevImg = () => {
+    imgIndex--;
+    console.log(imgIndex);
+    //check if it is the first image
+    if (imgIndex < 0) {
+        imgIndex = images.length - 1
+    }
+    //return src of previous image
+    return images[imgIndex].src
+}

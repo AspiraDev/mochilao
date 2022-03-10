@@ -1403,7 +1403,7 @@ progress {
 
   .col-lg-8 {
     flex: 0 0 auto;
-    width: 66.66666667%;
+    width: 80.66666667%;
   }
 
   .col-lg-9 {
@@ -7962,6 +7962,13 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
+.resumo{
+  text-align: justify;
+  
+  --bs-text-opacity: 1;
+  color: #f0f0f0 !important;
+}
+
 .text-reset {
   --bs-text-opacity: 1;
   color: inherit !important;
@@ -8015,7 +8022,7 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgb(0 0 0 / 19%);
 }
 
 .bg-dark {
@@ -11586,7 +11593,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(255, 255, 255, 2.9), rgba(255, 255, 255, 0.3));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -11622,7 +11629,7 @@ body {
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 .about-section p {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .projects-section {

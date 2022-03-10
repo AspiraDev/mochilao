@@ -7961,7 +7961,7 @@ textarea.form-control-lg {
   text-align: justify;
   
   --bs-text-opacity: 1;
-  color: #e0d5d6 !important;
+  color: #ffffff!important;
 }
 
 .text-reset {
@@ -11619,12 +11619,15 @@ body {
 }
 
 .about-section {
+  
   padding-top: 0rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+
 }
 
 .about-section2 {
   padding-top: 5rem;
+ 
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 
@@ -11722,3 +11725,6 @@ body {
 a {
   text-decoration: none;
 }
+
+
+
