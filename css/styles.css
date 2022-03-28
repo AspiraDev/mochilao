@@ -11722,3 +11722,13 @@ body {
 a {
   text-decoration: none;
 }
+
+.roteiro{
+  color: #000;
+	font-family: 'Raleway';
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 50px;
+  text-align: center;
+}
