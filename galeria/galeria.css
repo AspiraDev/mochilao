@@ -1,0 +1,135 @@
+body{
+    background: #000000;
+    
+}
+.photo-gallery {
+    color:#9bb6d1;
+    background-color:rgb(0, 0, 0);
+    width: 92%;
+  }
+  
+  .photo-gallery p {
+    color:#ffffff;
+  }
+  
+  .photo-gallery h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+    
+  }
+  
+  @media (max-width:767px) {
+    .photo-gallery h2 {
+      margin-bottom:25px;
+      padding-top:25px;
+      font-size:24px;
+    }
+  }
+  
+  .photo-gallery .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto 40px;
+  }
+  
+  .photo-gallery .intro p {
+    margin-bottom:0;
+  }
+  
+  .photo-gallery .photos {
+    padding-bottom:20px;
+  }
+  
+  .photo-gallery .item {
+    padding-bottom:30px;
+  }
+  
+  h1 {
+    
+    color: #ffffff;
+	font-family: 'Raleway';
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.col-lg-3 {
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 33%;
+
+}
+
+.col-lg-3 img {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+
+.col-lg-3:hover  img {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.titulo{
+    align-items: center;
+}
+
+h1 {
+    float: left;
+    width: 33%;
+    text-decoration: underline;
+  }
+
+a {
+    text-decoration: overline;
+    color: #ffffff;
+	font-family: 'Raleway';
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 50px;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.esquerda {
+    text-decoration: overline;
+    color: #ffffff;
+	font-family: 'Raleway';
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 50px;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 0%;
+}
+
+.esquerda1 {
+  text-decoration: overline;
+  color: #ffffff;
+font-family: 'Raleway';
+font-weight: 900;
+text-transform: uppercase;
+letter-spacing: -1px;
+font-size: 50px;
+  padding-top: 10px;
+  text-align: center;
+  margin-left: 23%;
+}
+
+.meio{
+  margin-left: 7%;
+
+}
+
+.lb-nav a.lb-next {
+  width: 10%;
+}
